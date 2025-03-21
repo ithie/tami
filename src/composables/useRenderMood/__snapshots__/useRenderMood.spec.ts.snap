@@ -1,0 +1,15 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`composables/useRenderMood > should render mood: HAPPY 1`] = `"(* *)"`;
+
+exports[`composables/useRenderMood > should render mood: HAPPY 2`] = `"(o o)"`;
+
+exports[`composables/useRenderMood > should render mood: HUNGRY 1`] = `"(- - )"`;
+
+exports[`composables/useRenderMood > should render mood: SUPER_HAPPY 1`] = `"(^ ^)"`;
+
+exports[`composables/useRenderMood > should render mood: TIRED 1`] = `"(u u)"`;
+
+exports[`composables/useRenderMood > should render mood: TIRED 2`] = `"(u u)"`;
+
+exports[`composables/useRenderMood > should render mood: VERY_HUNGRY 1`] = `"(^ ^)"`;

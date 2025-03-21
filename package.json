@@ -1,0 +1,90 @@
+{
+  "name": "tami",
+  "private": true,
+  "version": "0.0.1",
+  "type": "module",
+  "main": "main.ce.ts",
+  "scripts": {
+    "build": "npm run quality:gate && vite build",
+    "build-storybook": "storybook build",
+    "dev": "vite",
+    "dev:e2e": "VITE_ENV=e2e vite",
+    "format": "prettier --write ./",
+    "jscpd": "jscpd --pattern 'src/**/*.(ts|vue)'",
+    "lint": "eslint --fix",
+    "quality:gate": "npm run type-check && npm run jscpd && npm run stylelint && npm run lint && npm run test",
+    "storybook": "storybook dev -p 6006 --disable-telemetry",
+    "stylelint": "stylelint '**/*.vue'",
+    "test": "vitest run --reporter=default --reporter=junit --outputFile=reports/junit.xml",
+    "test:e2e": "npx playwright test",
+    "test:e2e:ui": "npx playwright test --ui",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --reporter=html --coverage ",
+    "type-check": "vue-tsc --noEmit -p tsconfig.vitest.json --composite false"
+  },
+  "dependencies": {
+    "vue": "^3.4.27"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "^4.9.1",
+    "@playwright/test": "^1.50.1",
+    "@storybook/addon-a11y": "^8.6.4",
+    "@storybook/addon-essentials": "^8.6.4",
+    "@storybook/vue3": "^8.6.4",
+    "@storybook/vue3-vite": "^8.6.4",
+    "@storybook/web-components": "^8.6.4",
+    "@storybook/web-components-vite": "^8.6.4",
+    "@tsconfig/node20": "^20.1.4",
+    "@types/jsdom": "^21.1.1",
+    "@types/node": "^22.13.9",
+    "@typescript-eslint/eslint-plugin": "^8.22.0",
+    "@vitejs/plugin-vue": "^5.2.1",
+    "@vitest/coverage-istanbul": "^3.0.9",
+    "@vitest/coverage-v8": "^3.0.8",
+    "@vitest/ui": "^3.0.8",
+    "@vue/eslint-config-prettier": "^10.2.0",
+    "@vue/eslint-config-typescript": "^14.3.0",
+    "@vue/test-utils": "^2.4.6",
+    "@vue/tsconfig": "^0.7.0",
+    "@vue/web-component-wrapper": "^1.3.0",
+    "autoprefixer": "^10.4.19",
+    "axe-playwright": "^2.0.1",
+    "eslint": "^9.20.1",
+    "eslint-plugin-storybook": "^0.11.2",
+    "eslint-plugin-vue": "^9.32.0",
+    "jscpd": "^4.0.4",
+    "jsdom": "^26.0.0",
+    "prettier": "^3.0.0",
+    "rollup-plugin-visualizer": "^5.14.0",
+    "sass": "^1.83.1",
+    "storybook": "^8.6.4",
+    "stylelint-config-recommended-scss": "^14.1.0",
+    "stylelint-config-recommended-vue": "^1.6.0",
+    "stylelint-config-standard": "^37.0.0",
+    "stylelint-order": "^6.0.4",
+    "stylelint-scss": "^6.11.0",
+    "tsx": "^4.19.2",
+    "typescript": "^5.8.0",
+    "typescript-eslint": "^8.24.0",
+    "vite": "^6.2.0",
+    "vitest": "^3.0.8",
+    "vue-tsc": "^2.2.8"
+  },
+  "jscpd": {
+    "threshold": 0.4,
+    "reporters": [
+      "console"
+    ],
+    "format": [
+      "typescript"
+    ],
+    "ignore": [
+      "**/__snapshots__/**",
+      "**/*.e2e.ts",
+      "**/*.spec.ts",
+      "**/*.stories.ts"
+    ],
+    "absolute": true,
+    "gitignore": true
+  }
+}

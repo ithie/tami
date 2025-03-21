@@ -1,0 +1,106 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`components/StatsViz > should render 1`] = `
+<div
+  data-v-app=""
+>
+  
+  <pre>
+    Hunger:     ███       
+  </pre>
+  <pre>
+    Happieness: █████████ 
+  </pre>
+  <pre>
+    Energy:     ██████    
+  </pre>
+  <pre>
+    Age:        3
+  </pre>
+  
+</div>
+`;
+
+exports[`components/StatsViz > should render max ranges 1`] = `
+<div
+  data-v-app=""
+>
+  
+  <pre>
+    Hunger:     ██████████
+  </pre>
+  <pre>
+    Happieness: ██████████
+  </pre>
+  <pre>
+    Energy:     ██████████
+  </pre>
+  <pre>
+    Age:        1
+  </pre>
+  
+</div>
+`;
+
+exports[`components/StatsViz > should render max ranges 2`] = `
+<div
+  data-v-app=""
+>
+  
+  <pre>
+    Hunger:     ███████████████
+  </pre>
+  <pre>
+    Happieness: ███████████████
+  </pre>
+  <pre>
+    Energy:     ███████████████
+  </pre>
+  <pre>
+    Age:        1
+  </pre>
+  
+</div>
+`;
+
+exports[`components/StatsViz > should render min ranges 1`] = `
+<div
+  data-v-app=""
+>
+  
+  <pre>
+    Hunger:     █████     
+  </pre>
+  <pre>
+    Happieness: █████     
+  </pre>
+  <pre>
+    Energy:     █████     
+  </pre>
+  <pre>
+    Age:        1
+  </pre>
+  
+</div>
+`;
+
+exports[`components/StatsViz > should render min ranges 2`] = `
+<div
+  data-v-app=""
+>
+  
+  <pre>
+    Hunger:                              
+  </pre>
+  <pre>
+    Happieness:                          
+  </pre>
+  <pre>
+    Energy:                              
+  </pre>
+  <pre>
+    Age:        1
+  </pre>
+  
+</div>
+`;

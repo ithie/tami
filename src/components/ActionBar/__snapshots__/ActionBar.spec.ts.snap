@@ -1,0 +1,20 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`components/ActionBar > should render 1`] = `
+<div
+  class="actions"
+>
+  <button>
+    Feed
+  </button>
+  <button>
+    Play
+  </button>
+  <button>
+    Sleep
+  </button>
+  <button>
+    Nothing
+  </button>
+</div>
+`;

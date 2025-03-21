@@ -1,0 +1,71 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`components/TamiExpression > should render mood: HAPPY 1`] = `
+<div
+  class="tami-border"
+>
+  <pre>
+    (* *)
+  </pre>
+</div>
+`;
+
+exports[`components/TamiExpression > should render mood: HAPPY 2`] = `
+<div
+  class="tami-border"
+>
+  <pre>
+    (o o)
+  </pre>
+</div>
+`;
+
+exports[`components/TamiExpression > should render mood: HUNGRY 1`] = `
+<div
+  class="tami-border"
+>
+  <pre>
+    (- - )
+  </pre>
+</div>
+`;
+
+exports[`components/TamiExpression > should render mood: SUPER_HAPPY 1`] = `
+<div
+  class="tami-border"
+>
+  <pre>
+    (^ ^)
+  </pre>
+</div>
+`;
+
+exports[`components/TamiExpression > should render mood: TIRED 1`] = `
+<div
+  class="tami-border"
+>
+  <pre>
+    (o o)
+  </pre>
+</div>
+`;
+
+exports[`components/TamiExpression > should render mood: TIRED 2`] = `
+<div
+  class="tami-border"
+>
+  <pre>
+    (u u)
+  </pre>
+</div>
+`;
+
+exports[`components/TamiExpression > should render mood: VERY_HUNGRY 1`] = `
+<div
+  class="tami-border"
+>
+  <pre>
+    (^ ^)
+  </pre>
+</div>
+`;
