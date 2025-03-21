@@ -10,6 +10,7 @@ coverage
 *.lcov
 node_modules/
 reports/
+html/
 stats.html
 *.tsbuildinfo
 .npm
