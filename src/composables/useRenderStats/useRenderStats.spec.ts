@@ -1,9 +1,9 @@
 import { describe, expect, test } from 'vitest'
-import useRenderStats from './useRenderStats'
-import { type Ref } from 'vue'
+import useRenderStats from '@/composables/useRenderStats/useRenderStats'
+import type IRefMood from '@/interfaces/IRefMood'
 import getInitialValues from '../utils/getInitialValues'
 
-const assertions: { hunger: Ref<number>; happieness: Ref<number>; energy: Ref<number> }[] = [
+const assertions: IRefMood[] = [
   getInitialValues([0, 5, 5]),
   getInitialValues([10, 15, 15]),
   getInitialValues([-10, 3, 3])
@@ -12,9 +12,9 @@ const assertions: { hunger: Ref<number>; happieness: Ref<number>; energy: Ref<nu
 describe('composables/useRenderStats', () => {
   assertions.forEach((given, index) =>
     test(`should render stats: ${index}`, () => {
-      const { renderedEnergy, renderedHappieness, renderedHunger } = useRenderStats(given)
+      const { renderedEnergy, renderedHappiness, renderedHunger } = useRenderStats(given)
       expect(renderedEnergy.value).toMatchSnapshot()
-      expect(renderedHappieness.value).toMatchSnapshot()
+      expect(renderedHappiness.value).toMatchSnapshot()
       expect(renderedHunger.value).toMatchSnapshot()
     })
   )

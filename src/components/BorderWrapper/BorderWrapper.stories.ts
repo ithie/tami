@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/vue3'
-import BorderWrapper from './BorderWrapper.vue'
+import BorderWrapper from '@/components/BorderWrapper/BorderWrapper.vue'
 
 const meta = {
   title: 'Components/BorderWrapper',

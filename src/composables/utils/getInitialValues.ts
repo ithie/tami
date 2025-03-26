@@ -1,10 +1,12 @@
-import { ref, type Ref } from 'vue'
+import type IRefMood from '@/interfaces/IRefMood'
+import { ref } from 'vue'
 
-export default <T = Ref<number>>(
-  [energy, happieness, hunger]: [number, number, number],
+export default <T = IRefMood>(
+  [energy = 5, happiness = 5, hunger = 5]: [number, number, number],
   noRef = false
-): { energy: T; happieness: T; hunger: T } => ({
-  energy: (noRef ? energy : ref(energy)) as T,
-  happieness: (noRef ? happieness : ref(happieness)) as T,
-  hunger: (noRef ? hunger : ref(hunger)) as T
-})
+): T =>
+  ({
+    energy: noRef ? energy : ref(energy),
+    happiness: noRef ? happiness : ref(happiness),
+    hunger: noRef ? hunger : ref(hunger)
+  }) as T

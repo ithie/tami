@@ -1,5 +1,8 @@
 import { defineConfig } from 'vitest/config'
 import vue from '@vitejs/plugin-vue'
+import { resolve } from 'path'
+
+const pathSrc = resolve(__dirname, 'src')
 
 export default defineConfig({
   css: {
@@ -7,6 +10,11 @@ export default defineConfig({
       scss: {
         api: 'modern-compiler'
       }
+    }
+  },
+  resolve: {
+    alias: {
+      '@': pathSrc
     }
   },
   plugins: [vue()],

@@ -6,16 +6,16 @@ exports[`components/StatsViz > should render 1`] = `
 >
   
   <pre>
-    Hunger:     ███       
+    Hunger:       ███       
   </pre>
   <pre>
-    Happieness: █████████ 
+    Happiness:    █████████ 
   </pre>
   <pre>
-    Energy:     ██████    
+    Energy:       ██████    
   </pre>
   <pre>
-    Age:        3
+    Age:          3
   </pre>
   
 </div>
@@ -27,16 +27,16 @@ exports[`components/StatsViz > should render max ranges 1`] = `
 >
   
   <pre>
-    Hunger:     ██████████
+    Hunger:       ██████████
   </pre>
   <pre>
-    Happieness: ██████████
+    Happiness:    ██████████
   </pre>
   <pre>
-    Energy:     ██████████
+    Energy:       ██████████
   </pre>
   <pre>
-    Age:        1
+    Age:          1
   </pre>
   
 </div>
@@ -48,16 +48,16 @@ exports[`components/StatsViz > should render max ranges 2`] = `
 >
   
   <pre>
-    Hunger:     ███████████████
+    Hunger:       ███████████████
   </pre>
   <pre>
-    Happieness: ███████████████
+    Happiness:    ███████████████
   </pre>
   <pre>
-    Energy:     ███████████████
+    Energy:       ███████████████
   </pre>
   <pre>
-    Age:        1
+    Age:          1
   </pre>
   
 </div>
@@ -69,16 +69,16 @@ exports[`components/StatsViz > should render min ranges 1`] = `
 >
   
   <pre>
-    Hunger:     █████     
+    Hunger:       █████     
   </pre>
   <pre>
-    Happieness: █████     
+    Happiness:    █████     
   </pre>
   <pre>
-    Energy:     █████     
+    Energy:       █████     
   </pre>
   <pre>
-    Age:        1
+    Age:          1
   </pre>
   
 </div>
@@ -90,16 +90,16 @@ exports[`components/StatsViz > should render min ranges 2`] = `
 >
   
   <pre>
-    Hunger:                              
+    Hunger:                                
   </pre>
   <pre>
-    Happieness:                          
+    Happiness:                             
   </pre>
   <pre>
-    Energy:                              
+    Energy:                                
   </pre>
   <pre>
-    Age:        1
+    Age:          1
   </pre>
   
 </div>

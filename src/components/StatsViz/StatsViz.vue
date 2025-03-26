@@ -1,19 +1,12 @@
 <template>
-  <pre>Hunger:     {{ renderedHunger }}</pre>
-  <pre>Happieness: {{ renderedHappieness }}</pre>
-  <pre>Energy:     {{ renderedEnergy }}</pre>
-  <pre>Age:        {{ age }}</pre>
+  <pre>{{ labelHunger }}</pre>
+  <pre>{{ labelHappiness }}</pre>
+  <pre>{{ labelEnergy }}</pre>
+  <pre>{{ labelAge }}</pre>
 </template>
 
 <script lang="ts" setup>
-import useMood from '../../composables/useMood/useMood'
-import useRenderStats from '../../composables/useRenderStats/useRenderStats'
+import useLabels from './composables/useLabels/useLabels'
 
-const { hunger, happieness, energy, age } = useMood()
-
-const { renderedEnergy, renderedHappieness, renderedHunger } = useRenderStats({
-  hunger,
-  happieness,
-  energy
-})
+const { labelHunger, labelHappiness, labelEnergy, labelAge } = useLabels()
 </script>
