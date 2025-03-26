@@ -1,4 +1,4 @@
-import type { DefineComponent } from 'vue'
+import { type DefineComponent } from 'vue'
 import registry from './src/registry'
 import TamiCore from './src/TamiCore.ce.vue'
 

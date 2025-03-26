@@ -1,12 +1,10 @@
-import { MOODS } from '../../enums/MOODS'
 import { describe, expect, test } from 'vitest'
-import useRenderMood from './useRenderMood'
-import { type Ref } from 'vue'
+import { MOODS } from '@/enums/MOODS'
+import useRenderMood from '@/composables/useRenderMood/useRenderMood'
+import type IRefMood from '@/interfaces/IRefMood'
 import getInitialValues from '../utils/getInitialValues'
 
-const assertions: Array<
-  [MOODS, { hunger: Ref<number>; happieness: Ref<number>; energy: Ref<number> }]
-> = [
+const assertions: Array<[MOODS, IRefMood]> = [
   [MOODS.TIRED, getInitialValues([0, 5, 5])],
   [MOODS.VERY_HUNGRY, getInitialValues([5, 9, 5])],
   [MOODS.TIRED, getInitialValues([5, 5, 3])],

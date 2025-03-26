@@ -1,0 +1,19 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`useI18n > switches between languages "en" and "de" > in a rendered component 1`] = `
+<div>
+  Sleep
+</div>
+`;
+
+exports[`useI18n > switches between languages "en" and "de" > in a rendered component 2`] = `
+<div>
+  Schlafen
+</div>
+`;
+
+exports[`useI18n > switches between languages "en" and "de" > in a rendered component 3`] = `
+<div>
+  Sleep
+</div>
+`;

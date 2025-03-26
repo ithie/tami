@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/vue3'
-import StatsViz from './StatsViz.vue'
+import StatsViz from '@/components/StatsViz/StatsViz.vue'
 
 const meta = {
   title: 'Components/StatsViz',

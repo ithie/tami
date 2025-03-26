@@ -1,36 +1,36 @@
 import type { Meta, StoryObj } from '@storybook/vue3'
-import TamiExpression from './TamiExpression.vue'
-import { MOODS } from '../../enums/MOODS'
-import useMood from '../../composables/useMood/useMood'
+import TamiExpression from '@/components/TamiExpression/TamiExpression.vue'
+import { MOODS } from '@/enums/MOODS'
+import useMood from '@/composables/useMood/useMood'
 
 const moodValues = {
   [MOODS.NEUTRAL]: {
-    happieness: 5,
+    happiness: 5,
     hunger: 5,
     energy: 5
   },
   [MOODS.HUNGRY]: {
-    happieness: 5,
+    happiness: 5,
     hunger: 7,
     energy: 5
   },
   [MOODS.VERY_HUNGRY]: {
-    happieness: 5,
+    happiness: 5,
     hunger: 9,
     energy: 5
   },
   [MOODS.HAPPY]: {
-    happieness: 7,
+    happiness: 7,
     hunger: 5,
     energy: 5
   },
   [MOODS.SUPER_HAPPY]: {
-    happieness: 9,
+    happiness: 9,
     hunger: 5,
     energy: 5
   },
   [MOODS.TIRED]: {
-    happieness: 5,
+    happiness: 5,
     hunger: 5,
     energy: 0
   }
@@ -43,7 +43,7 @@ const meta = {
     setup() {
       console.log(args.state)
       if (!args.state || !moodValues[args.state]) {
-        useMood({ happieness: 5, hunger: 5, energy: 5 })
+        useMood({ happiness: 5, hunger: 5, energy: 5 })
       } else {
         useMood(moodValues[args.state])
       }

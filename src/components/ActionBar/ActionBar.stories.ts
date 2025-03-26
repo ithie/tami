@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/vue3'
-import ActionBar from './ActionBar.vue'
+import ActionBar from '@/components/ActionBar/ActionBar.vue'
 
 const meta = {
   title: 'Components/ActionBar',

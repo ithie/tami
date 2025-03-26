@@ -1,5 +1,6 @@
-import { computed, ref, watchEffect, type Ref } from 'vue'
-import { MOODS } from '../../enums/MOODS'
+import { computed, ref, watchEffect } from 'vue'
+import { MOODS } from '@/enums/MOODS'
+import type IRefMood from '@/interfaces/IRefMood'
 
 const EXPRESSIONS = {
   [MOODS.NEUTRAL]: '(o o)',
@@ -10,15 +11,7 @@ const EXPRESSIONS = {
   [MOODS.TIRED]: '(u u)'
 }
 
-export default ({
-  hunger,
-  happieness,
-  energy
-}: {
-  hunger: Ref<number>
-  happieness: Ref<number>
-  energy: Ref<number>
-}) => {
+export default ({ hunger, happiness, energy }: IRefMood) => {
   const mood = ref(MOODS.NEUTRAL)
 
   watchEffect(() => {
@@ -30,9 +23,9 @@ export default ({
       mood.value = MOODS.TIRED
     } else if (hunger.value >= 7) {
       mood.value = MOODS.HUNGRY
-    } else if (happieness.value >= 9) {
+    } else if (happiness.value >= 9) {
       mood.value = MOODS.SUPER_HAPPY
-    } else if (happieness.value >= 7) {
+    } else if (happiness.value >= 7) {
       mood.value = MOODS.HAPPY
     } else {
       mood.value = MOODS.NEUTRAL

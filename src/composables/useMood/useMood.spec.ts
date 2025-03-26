@@ -1,18 +1,18 @@
 import { describe, expect, it } from 'vitest'
-import useMood from './useMood'
-import { ACTIONS } from '../../enums/ACTIONS'
 import { unref } from 'vue'
+import useMood from '@/composables/useMood/useMood'
+import { ACTIONS } from '@/enums/ACTIONS'
 
 const assertValueChanges = (expected: {
   hunger: number
-  happieness: number
+  happiness: number
   energy: number
   age: number
 }) => {
-  const { hunger, happieness, energy, age } = useMood()
+  const { hunger, happiness, energy, age } = useMood()
   expect({
     hunger: unref(hunger),
-    happieness: unref(happieness),
+    happiness: unref(happiness),
     energy: unref(energy),
     age: unref(age)
   }).toEqual(expected)
@@ -41,7 +41,7 @@ describe('composables/useMood', () => {
           version: 0
         }
       },
-      happieness: {
+      happiness: {
         __v_isRef: true,
         __v_isShallow: false,
         _rawValue: 5,
@@ -64,64 +64,64 @@ describe('composables/useMood', () => {
     })
   })
   it('should set initial values', () => {
-    const { hunger, happieness, energy, age } = useMood({
+    const { hunger, happiness, energy, age } = useMood({
       hunger: 15,
-      happieness: 25,
+      happiness: 25,
       energy: 35,
       age: 11
     })
 
     expect(hunger.value).toEqual(15)
-    expect(happieness.value).toEqual(25)
+    expect(happiness.value).toEqual(25)
     expect(energy.value).toEqual(35)
     expect(age.value).toEqual(11)
   })
   describe('handle doAction', () => {
     const assertionActionsSet: Array<
-      [ACTIONS, Array<{ age: number; energy: number; happieness: number; hunger: number }>]
+      [ACTIONS, Array<{ age: number; energy: number; happiness: number; hunger: number }>]
     > = [
       [
         ACTIONS.FEED,
         [
-          { age: 2, energy: 6, happieness: 5, hunger: 4 },
-          { age: 3, energy: 7, happieness: 5, hunger: 3 },
-          { age: 4, energy: 8, happieness: 5, hunger: 2 },
-          { age: 5, energy: 9, happieness: 5, hunger: 1 },
-          { age: 6, energy: 10, happieness: 5, hunger: 0 },
-          { age: 7, energy: 10, happieness: 5, hunger: 0 }
+          { age: 2, energy: 6, happiness: 5, hunger: 4 },
+          { age: 3, energy: 7, happiness: 5, hunger: 3 },
+          { age: 4, energy: 8, happiness: 5, hunger: 2 },
+          { age: 5, energy: 9, happiness: 5, hunger: 1 },
+          { age: 6, energy: 10, happiness: 5, hunger: 0 },
+          { age: 7, energy: 10, happiness: 5, hunger: 0 }
         ]
       ],
       [
         ACTIONS.PLAY,
         [
-          { age: 2, energy: 3, happieness: 6, hunger: 7 },
-          { age: 3, energy: 1, happieness: 7, hunger: 9 },
-          { age: 4, energy: 0, happieness: 8, hunger: 10 },
-          { age: 5, energy: 0, happieness: 9, hunger: 10 },
-          { age: 6, energy: 0, happieness: 10, hunger: 10 },
-          { age: 7, energy: 0, happieness: 10, hunger: 10 }
+          { age: 2, energy: 3, happiness: 6, hunger: 7 },
+          { age: 3, energy: 1, happiness: 7, hunger: 9 },
+          { age: 4, energy: 0, happiness: 8, hunger: 10 },
+          { age: 5, energy: 0, happiness: 9, hunger: 10 },
+          { age: 6, energy: 0, happiness: 10, hunger: 10 },
+          { age: 7, energy: 0, happiness: 10, hunger: 10 }
         ]
       ],
       [
         ACTIONS.SLEEP,
         [
-          { age: 2, energy: 6, happieness: 4, hunger: 9 },
-          { age: 3, energy: 7, happieness: 3, hunger: 10 },
-          { age: 4, energy: 8, happieness: 2, hunger: 10 },
-          { age: 5, energy: 9, happieness: 1, hunger: 10 },
-          { age: 6, energy: 10, happieness: 0, hunger: 10 },
-          { age: 7, energy: 10, happieness: 0, hunger: 10 }
+          { age: 2, energy: 6, happiness: 4, hunger: 9 },
+          { age: 3, energy: 7, happiness: 3, hunger: 10 },
+          { age: 4, energy: 8, happiness: 2, hunger: 10 },
+          { age: 5, energy: 9, happiness: 1, hunger: 10 },
+          { age: 6, energy: 10, happiness: 0, hunger: 10 },
+          { age: 7, energy: 10, happiness: 0, hunger: 10 }
         ]
       ],
       [
         ACTIONS.NOTHING,
         [
-          { age: 2, energy: 4, happieness: 4, hunger: 6 },
-          { age: 3, energy: 3, happieness: 3, hunger: 7 },
-          { age: 4, energy: 2, happieness: 2, hunger: 8 },
-          { age: 5, energy: 1, happieness: 1, hunger: 9 },
-          { age: 6, energy: 0, happieness: 0, hunger: 10 },
-          { age: 7, energy: 0, happieness: 0, hunger: 10 }
+          { age: 2, energy: 4, happiness: 4, hunger: 6 },
+          { age: 3, energy: 3, happiness: 3, hunger: 7 },
+          { age: 4, energy: 2, happiness: 2, hunger: 8 },
+          { age: 5, energy: 1, happiness: 1, hunger: 9 },
+          { age: 6, energy: 0, happiness: 0, hunger: 10 },
+          { age: 7, energy: 0, happiness: 0, hunger: 10 }
         ]
       ]
     ]
@@ -130,7 +130,7 @@ describe('composables/useMood', () => {
       it(`should change handle ${action}`, () => {
         const { doAction } = useMood({
           hunger: 5,
-          happieness: 5,
+          happiness: 5,
           energy: 5,
           age: 1
         })

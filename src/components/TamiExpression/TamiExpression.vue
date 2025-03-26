@@ -5,12 +5,12 @@
 </template>
 
 <script lang="ts" setup>
-import useRenderMood from '../../composables/useRenderMood/useRenderMood'
-import useMood from '../../composables/useMood/useMood'
+import useRenderMood from '@/composables/useRenderMood/useRenderMood'
+import useMood from '@/composables/useMood/useMood'
 
-const { hunger, happieness, energy } = useMood()
+const { hunger, happiness, energy } = useMood()
 
-const tami = useRenderMood({ hunger, happieness, energy })
+const tami = useRenderMood({ hunger, happiness, energy })
 </script>
 
 <style lang="scss">
