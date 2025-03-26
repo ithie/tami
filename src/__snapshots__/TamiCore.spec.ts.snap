@@ -1,0 +1,78 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`TamiCore > should render 1`] = `
+<div
+  class="border-all"
+>
+  
+  <div
+    class="wrapper"
+  >
+    
+    
+    <button>
+      EN
+    </button>
+    <button>
+      DE
+    </button>
+    <button>
+      CS
+    </button>
+    <button>
+      IT
+    </button>
+    <button>
+      ES
+    </button>
+    <button>
+      FR
+    </button>
+    
+    
+  </div>
+  <div
+    style="height: 15px; padding: 0px; margin: 0px; display: block; width: 100%;"
+  />
+  <div
+    class="tami-border"
+  >
+    <pre>
+      (o o)
+    </pre>
+  </div>
+  
+  <pre>
+    Hunger:       █████     
+  </pre>
+  <pre>
+    Happiness:    █████     
+  </pre>
+  <pre>
+    Energy:       █████     
+  </pre>
+  <pre>
+    Age:          1
+  </pre>
+  
+  <div
+    class="wrapper"
+  >
+    
+    <button>
+      Feed
+    </button>
+    <button>
+      Play
+    </button>
+    <button>
+      Sleep
+    </button>
+    <button>
+      Nothing
+    </button>
+    
+  </div>
+  
+</div>
+`;

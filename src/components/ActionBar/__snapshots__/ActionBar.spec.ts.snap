@@ -2,8 +2,9 @@
 
 exports[`components/ActionBar > should render 1`] = `
 <div
-  class="actions"
+  class="wrapper"
 >
+  
   <button>
     Feed
   </button>
@@ -16,5 +17,6 @@ exports[`components/ActionBar > should render 1`] = `
   <button>
     Nothing
   </button>
+  
 </div>
 `;

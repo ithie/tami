@@ -1,13 +1,13 @@
 import type { Meta, StoryObj } from '@storybook/vue3'
-import TamiCore from './TamiCore.ce.vue'
-import useMood from './composables/useMood/useMood'
+import TamiCore from '@/TamiCore.ce.vue'
+import useMood from '@/composables/useMood/useMood'
 
 const meta = {
   title: 'TamiCore',
   component: TamiCore,
   render: () => ({
     setup() {
-      useMood({ hunger: 5, happieness: 5, energy: 5, age: 1 })
+      useMood({ hunger: 5, happiness: 5, energy: 5, age: 1 })
     },
     components: { TamiCore },
     template: '<TamiCore />'
