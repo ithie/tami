@@ -18,6 +18,7 @@ stats.html
 .stylelintcache
 *.tgz
 dist
+test-results/
 
 ### macOS template
 # General
