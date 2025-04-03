@@ -1,3 +1,3 @@
 # tami
 
-A small Tamagotchi as a test vehicle for various things
+A small test vehicle for various things
